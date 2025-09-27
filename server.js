@@ -40,7 +40,7 @@ const upload = multer({ storage: storage }).any();
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.send("<h1>🚀 A API está rodando...</h1>");
 });
 
 app.post("/gerar-relatorio", upload, async (req, res) => {
